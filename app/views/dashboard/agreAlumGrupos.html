@@ -1,0 +1,43 @@
+<div>
+  
+  <h2>Agregar compañeros a grupos espontaneos <small>Agrega los compañeros que tengan tu mismo interes al grupo de estudio.</small></h2>
+  <div class="jumbotron">
+    <div class="container">
+        <div class="row"> 
+            <div class="form-group">
+                  <p><font color="white">2</font><small> Grupos de Estudio: </small>
+                    <select ng-model="GrupoSeleccionado" ng-options="grupo as grupo.descripcionTemporal for grupo in grupos track by grupo.grupoTemporalId" class="form-control input-lg">
+                      <option value="" selected disabled>Seleccione un grupo...</option>
+                    </select>
+                  </p>
+            </div>
+
+            <button ng-click = "fun5()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Seleccionar Grupo</button>
+            </br></br></br>
+
+            <h4>A continuación se presenta el ramo de estudio y los alumnos interesados en estudiarlo...</h4>
+            </br></br>
+
+            <div class="form-group">
+              <p><font color="white">2</font><small> Ramo de estudio: </small>
+                <input type="text" class="form-control input-lg" id="" placeholder="Seleccione un grupo en la casilla de grupos..." ng-model="ramoAestudiar"  disabled>
+              </p>
+            </div>
+
+            </br>
+
+            <div class="form-group">
+                  <p><font color="white">2</font><small> Alumnos interesados en el grupo: </small>
+                    <select ng-model="alumnoSeleccionado" ng-options="alumno as alumno.nombre for alumno in nombreAlumnosParaEstudiar track by alumno.usuarioId" class="form-control input-lg" ng-disabled="seleccionGrupo">
+                      <option value="" selected disabled>Seleccione un grupo...</option>
+                    </select>
+                  </p>
+            </div>
+            
+</br></br>
+             <button ng-click = "addAlumnoGrupo()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Agregar Alumno a Grupo</button>
+
+      </div>
+    </div>
+  </div>
+</div>

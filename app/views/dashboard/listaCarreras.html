@@ -1,0 +1,21 @@
+<div>
+	<!--a ui-sref="publicar" class="pull-right btn btn-primary btn-outline btn-rounded">Realizar una Publicación</a-->
+	<h2>Carreras</h2>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Lista de Carreras</h1>
+			</br>
+			<p>
+			    Para ver los datos actualizados, pincha aqui: <a ng-click=  "getData()" class="btn btn-primary btn-lg btn-outline btn-rounded">Actualizar Datos</a>
+			</p>
+			<ul ng-repeat="a in data">
+			    <li>
+				<span style="font-size:15pt">
+					{{a.carreraId}}. 
+					{{a.nombreCarrera}}
+			    </span>
+			    </li>
+		    </ul>
+		</div>
+	</div>
+</div>

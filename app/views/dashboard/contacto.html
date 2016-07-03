@@ -1,0 +1,68 @@
+<div>
+    <!--a ui-sref="publicar" class="pull-right btn btn-primary btn-outline btn-rounded">Realizar una Publicación</a-->
+    <h2>Contacto</h2>
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+        
+                <div class="col-lg-12">
+                    <h1 class="page-header">Contacto
+                        <small>Nuestro equipo de trabajo!</small>
+                    </h1>
+                </div>
+        
+                <div class="col-lg-12">
+                    <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
+                    <!--map zoom="17" center="-33.4495, -70.6821"></map-->
+                    <ng-map zoom="17" center="[-33.4491466,-70.6822691]">
+                      <marker position="-33.44978553492951,-70.68712932989001"
+                        title="Contacto"
+                        animation="Animation.BOUNCE"
+                        centered="true"></marker>
+                    </ng-map>
+                </div>
+        
+            </div>
+            <!-- /.row -->
+            <hr></br>
+        
+            <div class="row">
+        
+                <div>
+                    <img src="images/logo.png" class="user-avatar" /><br />
+                    <h3>StudyGroup</h3>
+                    <h4>Una página para juntarte a estudiar</h4>
+        
+                    <p>
+                        Universidad de Santiago de Chile<br>
+                        Departamento de Ingeniería Informática<br>
+                        Santiago, Región Metropolitana<br>
+                    </p>
+        
+                    <p><i class="fa fa-phone"></i> <abbr title="Teléfono">Phone</abbr>: +569 5422 7722</p>
+        
+                    <p><i class="fa fa-envelope-o"></i> <abbr title="Email">Email</abbr>: 
+                    <a>studygroup.usach@gmail.com</a></p>
+        
+                    <p><i class="fa fa-clock-o"></i> <abbr title="Horas">Horario</abbr>: Lunes - Viernes: 9:00 AM a 5:00 PM</p>
+                    <ul class="list-unstyled list-inline list-social-icons">
+                        <li class="tooltip-social facebook-link"><a href="#facebook-page" data-toggle="tooltip"
+                                                                    data-placement="top" title="Facebook"><i
+                                    class="fa fa-facebook-square fa-2x"></i></a></li>
+                            <li class="tooltip-social linkedin-link"><a href="#linkedin-company-page" data-toggle="tooltip"
+                                                                        data-placement="top" title="LinkedIn"><i
+                                    class="fa fa-linkedin-square fa-2x"></i></a></li>
+                            <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip"
+                                                                       data-placement="top" title="Twitter"><i
+                                    class="fa fa-twitter-square fa-2x"></i></a></li>
+                            <li class="tooltip-social google-plus-link"><a href="#google-plus-page" data-toggle="tooltip"
+                                                                           data-placement="top" title="Google+"><i
+                                    class="fa fa-google-plus-square fa-2x"></i></a></li>
+                        </ul>
+                    </div>
+            
+                </div>
+                    <!-- /.row -->
+            </div>
+        </div>
+    </div>

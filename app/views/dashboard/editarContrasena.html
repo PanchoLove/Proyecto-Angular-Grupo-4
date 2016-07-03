@@ -1,0 +1,33 @@
+<div>
+<div ng-controller="PerfilCtrl as up">
+	<a ng-click=  "getData()" class="pull-right btn btn-primary btn-outline btn-rounded">Mi Perfil</a>
+</div>
+<div ng-controller="EditarPerfilCtrl as up">
+	<h2>Modificar Contraseña</h2>
+	<div class="jumbotron">
+		<div class="container">
+		    <h1>Nueva Contraseña</br></br>
+            <div>
+            	<div class="row">
+            			<form role="form" ng-submit="submit()">
+            
+            				<div class="form-content">
+
+                                <div class="form-group">
+                                    <input type="password" class="form-control input-lg" id="" placeholder="Passsword Actual">
+                                </div>
+            
+            					<div class="form-group">
+            						<input type="password" class="form-control input-lg" id="" placeholder="Password Nuevo" ng-model="newPass">
+            					</div>
+            
+            				<button ng-click="editPassword()" type="submit" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Modificar Contraseña</button>
+            
+            			</form>
+            	</div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+</div>

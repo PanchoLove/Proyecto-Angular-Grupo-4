@@ -1,0 +1,26 @@
+<div>
+	<!--a ui-sref="publicar" class="pull-right btn btn-primary btn-outline btn-rounded">Realizar una Publicación</a-->
+	<h2>Mi Perfil</h2>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Datos Personales</h1>
+			</br>
+			<p>
+			    Para ver los datos actualizados, pincha aqui: <a ng-click=  "getData()" class="btn btn-primary btn-lg btn-outline btn-rounded">Actualizar Datos</a>
+			</p>
+			
+			<h2><small>Nombre: </small>{{data.nombre}}</h2>
+			<h2><small>Apellido: </small>{{data.apellidos}}</h2>
+			<h2><small>Email: </small>{{data.mail}}</h2>
+			<h2><small>Numero de Telefono: </small>{{data.numeroMovil}}</h2> <a href="#/dashboard/modificarMovil" class="btn btn-primary btn-lg btn-outline btn-rounded">Modificar Telefono</a>
+			<h2><small>Password: </small> ********</h2>  <a href="#/dashboard/modificarContrasena" class="btn btn-primary btn-lg btn-outline btn-rounded">Modificar Contraseña</a>
+			
+			<br><br><hr><br>
+			<h2>Mis Materias</h2>
+			<br>
+			<p>
+				<button ng-click = "fun1()" class="btn btn-primary btn-lg btn-outline btn-rounded pull-right">Modificar Materias</button>
+			</p>
+		</div>
+	</div>
+</div>

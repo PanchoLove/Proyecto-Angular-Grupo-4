@@ -1,0 +1,43 @@
+<div>
+  
+  <h2>Eliminar materias <small>Elimina de tu lista las materias que ya no son de tu interes.</small></h2>
+  <div class="jumbotron">
+    <div class="container">
+        <h1>Mis materias</h1>
+        <h2><small>Tu lista actual se despliega en pantalla, los ramos son los mismos que están en el menú desplegable. Si quieres eliminar un ramo selecciónalo y presiona el botón para eliminar de la lista. Una vez eliminados los ramos que ya no deseas, actualiza tu lista con el botón para actualizar.</small></h2>
+      </br></br></br>
+      <div>
+        <div class="row">
+            <div class="form-group">
+                  <p><font color="white">2</font><small> Materia de Estudio: </small>
+
+                  <select ng-model="MateriaSeleccionada" ng-options="materia as materia.nombreRamo for materia in ListaAux track by materia.ramoId" class="form-control input-lg">
+                    <option value="" selected disabled>Seleccione una materia...</option>
+                  </select>
+
+                  </p>
+              </div>
+              </br>
+
+              <button ng-click = "cambiarLista()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Actualizar Lista</button>
+
+              <button ng-click = "eliminarDeLista()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Eliminar Materia de Lista</button>
+
+            
+              </br></br>
+          <span style="font-size:22pt">
+            Lista de interes:
+            </br></br>
+            <ul ng-repeat="m in ListaAux">
+              <span style="font-size:15pt">
+            .- {{m.nombreRamo}}
+              </span>
+          </ul>
+          </span>
+          {{retorno}}
+          <!--/div-->
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>

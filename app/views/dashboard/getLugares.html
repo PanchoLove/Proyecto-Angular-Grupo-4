@@ -1,0 +1,46 @@
+<div>
+	<!--a ui-sref="publicar" class="pull-right btn btn-primary btn-outline btn-rounded">Realizar una Publicación</a-->
+	<div ng-class="{$state.includes('addLugar')}" class="pull-right btn btn-primary btn-outline btn-rounded"><a ui-sref="addLugar">Agregar un Lugar</a></div>
+	
+	<h2>Lugares </h2>
+	<div class="jumbotron">
+		<div class="container">
+			<h1><small>Lista de lugares</small></h1>
+			</br>
+			<hr>
+			<div ng-repeat = "a in data">
+			  	<div class="row">
+			  	<ul>
+			  	    <li>
+			  	        <div class="col-md-1">
+			  		        <strong>Id: </strong>{{a.idLugar}}
+			  		    </div>
+			  		    <div class="col-md-2">
+			  		        <strong>Latitud: </strong>{{a.latitudLugar}}
+			  		    </div>
+			  		    <div class="col-md-2">
+			  		        <strong>Longitud: </strong> {{a.longitudLugar}}
+			  		    </div>
+			  		    <div class="col-md-4">
+			  		        <ng-map zoom="16" center="[-33.4491466,-70.6822691]" default-style="false">
+                                <marker position="{{a.latitudLugar}}, {{a.longitudLugar}}">
+                                </marker>
+                            </ng-map>
+                        </div>
+                        <div>
+                        	<button ng-click=  "putLugar()" type="submit" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Editar Lugar</button>
+                        </div>
+			  	    </li>
+			  	</ul>
+			  	</div>
+			  <hr>
+			</div>
+			<br>
+			<h2>Agregar Lugar:</h2>
+            <br>      
+            <div ng-class="{$state.includes('addLugar')}" class="btn btn-primary btn-lg btn-outline btn-rounded">
+               <a ui-sref="addLugar">Agregar un Lugar</a> 
+            </div>
+        </div>
+	</div>
+</div>

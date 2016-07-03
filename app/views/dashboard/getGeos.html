@@ -1,0 +1,44 @@
+<div>
+  <div ng-class="{$state.includes('addGeo')}" class="pull-right btn btn-primary btn-outline btn-rounded"><a ui-sref="addGeo">Agregar mi Ubicación</a></div>
+
+	<h2>Ver personas estudiando cerca <small> Estudia con otras personas facilmente</small></h2>
+	<div class="jumbotron">
+		<div class="container">
+		    <h2>Encuentra otras personas que esten estudiando</h2>
+      <div>
+      <br><br>
+      <div>
+        <ng-map zoom="14" center="[-33.4491466,-70.6822691]">
+          <marker ng-repeat="p in positions" position="{{p.location.coordinates[0]}}, {{p.location.coordinates[1]}}">
+          </marker>
+           <!--info-window id="myInfoWindow" >
+            <div ng-non-bindable>
+              <h4 style="color:blue;">{{selectedCity.usuarioId}}</h4>
+              <h4 style="color:blue;">{{selectedCity.date}}</h4>
+            </div>
+          </info-window-->
+        </ng-map>
+      </div>
+      <br><br>
+      <div>
+        <h3>Lista de Usuarios y Ubicaciones</h3>
+        <ul>
+          <div ng-repeat = "p in positions">
+            <li>
+              <strong>UsuarioId: </strong>{{p.usuarioId}},
+              <strong> Latitud: </strong>{{p.location.coordinates[0]}},
+              <strong> Longitud: </strong>{{p.location.coordinates[1]}},
+              <strong> Fecha: </strong>{{p.date}},
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <br><hr>
+    <h2>Agregar mi ubicación:</h2>
+      <br>
+      <div ng-class="{$state.includes('addGeo')}" class="btn btn-primary btn-lg btn-outline btn-rounded">
+         <a ui-sref="addGeo">Agregar mi Ubicación</a> 
+      </div>
+  </div>
+</div>

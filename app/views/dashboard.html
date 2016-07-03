@@ -1,0 +1,30 @@
+<div  ng-controller="PerfilCtrl"> 
+<div class="dashboard-page">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+
+       <div class="text-center">
+        <h2 class="brand">StudyGroup</h2>
+        <img src="images/logo.png" class="user-avatar" /><br />
+        <a ui-sref="login" class="btn btn-white btn-outline btn-rounded btn-sm">Logout</a>
+      </div>
+
+      <ul class="nav nav-sidebar">
+        <!--li ng-class="{active: $state.includes('perfil')}"><a ng-click=  "getData()">Mi Perfil <span class="sr-only">(current)</span></a></li-->
+        
+        <li ng-class="{active: $state.includes('perfil')}"><a ui-sref="perfil">Mi Perfil</a></li>
+        <!--li ng-class="{active: $state.includes('gruposEspontaneos')}"><a ui-sref="gruposEspontaneos">Grupos Espontaneos</a></li-->
+        <li ng-class="{active: $state.includes('modiAyudante')}"><a ui-sref="modiAyudante">Perfil de Ayudante</a></li>
+        <li ng-class="{active: $state.includes('pubGrupoEspontaneo')}"><a ui-sref="pubGrupoEspontaneo">Publicar Grupo Espontaneo</a></li>
+        <li ng-class="{active: $state.includes('modifiGruposEsp')}"><a ui-sref="modifiGruposEsp">Modificar Grupos Espontaneos</a></li>
+        <li ng-class="{active: $state.includes('contacto')}"><a ui-sref="contacto">Contacto</a></li>
+      </ul>
+
+    </div>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ui-view>
+    </div>
+  </div>
+</div>
+</div>
+</div>

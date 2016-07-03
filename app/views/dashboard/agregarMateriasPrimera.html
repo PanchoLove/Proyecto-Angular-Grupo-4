@@ -1,0 +1,42 @@
+<div>
+	
+	<h2>Agregar materias <small>Agrega las materias que son de tu interes a tu lista.</small></h2>
+	<div class="jumbotron">
+		<div class="container">
+		    <h1>Generar lista de interes</h1>
+
+			</br></br></br>
+      <div>
+      	<div class="row">
+      			<div class="form-group">
+                  <p><font color="white">2</font><small> Materia de Estudio: </small>
+
+                  <select ng-model="MateriaSeleccionada" ng-options="materia as materia.nombreRamo for materia in ListaAux track by materia.ramoId" class="form-control input-lg">
+                    <option value="" selected disabled>Seleccione una materia...</option>
+                  </select>
+
+                  </p>
+              </div>
+              </br>
+
+              <button ng-click = "agregarLista()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Agregar Lista</button>
+
+              <button ng-click = "agregarAlista()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Agregar Materia a Lista</button>
+
+      			
+              </br></br>
+          <span style="font-size:22pt">
+            Lista de interes:
+            </br></br>
+            <ul ng-repeat="m in Lista">
+              <span style="font-size:15pt">
+            .- {{m.nombreRamo}}
+              </span>
+          </ul>
+          </span>
+      		<!--/div-->
+      	</div>  
+      </div>
+    </div>
+  </div>
+</div>

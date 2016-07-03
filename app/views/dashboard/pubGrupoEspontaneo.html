@@ -1,0 +1,42 @@
+<div>
+	<a ui-sref="publicar" class="pull-right btn btn-primary btn-outline btn-rounded">Realizar una Publicación</a>
+	<h2>Agregar Grupo de Estudio Espontáneo <small> Estudia con otras personas facilmente</small></h2>
+	<div class="jumbotron">
+		<div class="container">
+		    <h1>Agrega un grupo de estudio!</h1>
+			Queremos que puedas estudiar con difntes personas de la universidad la asignatura que desees
+			</br></br></br>
+      <div>
+      	<div class="row">
+      			<form role="form" ng-submit="submit()">
+      
+      				<div class="form-content">
+      
+      				    <div class="form-group">
+      						<input type="text" class="form-control input-lg" id="" placeholder="Nombre" ng-model="newNombre">
+      				</div>
+              
+              <div class="form-group">
+                  <p><font color="white">2</font><small> Materia de Estudio: </small>
+                  <select name="materia" ng-model="newMateria" class="form-control input-lg">
+                      <option value="0">Cálculo</option>
+                      <option value="1">Álgebra</option>
+                  </select>
+                  </p>
+              </div>
+              </br>
+              <!--div ng-controller="GruposEspontaneosCtrl"-->
+                <p><font color="white">2</font><small>Ubicación del grupo: </small>
+                <map zoom="17" center="-33.4490, -70.6831" on-click="placeMarker()">
+                </map>
+              <!--/div-->
+            
+      				<button type="submit" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Agregar Grupo</button>
+      
+      			</form>
+      		<!--/div-->
+      	</div>  
+      </div>
+    </div>
+  </div>
+</div>

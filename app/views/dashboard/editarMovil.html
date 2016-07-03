@@ -1,0 +1,29 @@
+<div>
+<div ng-controller="PerfilCtrl as up">
+	<a ng-click=  "getData()" class="pull-right btn btn-primary btn-outline btn-rounded">Mi Perfil</a>
+</div>
+<div ng-controller="EditarPerfilCtrl as up">
+	<h2>Modificar Telefono Movil</h2>
+	<div class="jumbotron">
+		<div class="container">
+		    <h1>Nuevo Telefono Movil</br></br>
+            <div>
+            	<div class="row">
+            			<form role="form" ng-submit="submit()">
+            
+            				<div class="form-content">
+            
+            					<div class="form-group">
+            						<input type="number" class="form-control input-lg" id="" placeholder="Nuevo Telefono Movil" ng-model="newMovil">
+            					</div>
+            
+            				<button ng-click="editTelefono()" type="submit" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Modificar Telefono Movil</button>
+            
+            			</form>
+            	</div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,16 @@
+<div>
+	<h2>Mi Ubicación</h2>
+	<div class="jumbotron">
+		<div class="container">
+            <div>
+              <ng-map zoom="17" center="[-33.4491466,-70.6822691]">
+                <marker position="{{position.location.coordinates[0]}}, {{position.location.coordinates[1]}}">
+                </marker>
+              </ng-map>
+            </div>
+            <div>
+            	<p>{{position.location.coordinates[0]}}, {{position.location.coordinates[1]}}</p>
+            </div>
+        </div>
+    </div>
+</div>

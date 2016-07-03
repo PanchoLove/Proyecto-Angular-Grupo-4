@@ -1,0 +1,44 @@
+<div ng-init="getMateriasInteresUsu()">
+	
+	<h2>Modificar materias <small>Observa, agrega y elimina materias de tu interés.</small></h2>
+	<div class="jumbotron">
+		<div class="container">
+		    <h1>Mis materias</h1>
+			
+			</br></br></br>
+      <div ng-if = "largo == 0">
+      	<div class="row">
+				      <span style="font-size:22pt">
+						No tiene ninguna materia agregada a su lista de intereses.
+					    </span>
+		    	</br></br>
+
+      			<button ng-click = "fun3()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Agregar Materias</button>
+
+      		<!--/div-->
+      	</div> 
+      </div>
+      <div ng-if = "largo > 0">
+      A continuación se presenta la lista de interes...
+      	
+</br></br>
+          <span style="font-size:22pt">
+            Lista de interes:
+            </br>
+            <ul ng-repeat="m in materias[0].ramo">
+              <span style="font-size:15pt">
+            .- {{m.nombreRamo}}
+              </span>
+          </ul>
+          </span>
+		    	</br></br>
+
+      			<button ng-click = "fun1()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Agregar Materias</button>
+
+      			<button ng-click = "fun2()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Eliminar Materias</button>
+      		<!--/div-->
+      	</div> 
+      </div>
+    </div>
+  </div>
+</div>

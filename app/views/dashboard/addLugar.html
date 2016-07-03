@@ -1,0 +1,25 @@
+<div>
+	<!--a ui-sref="publicar" class="pull-right btn btn-primary btn-outline btn-rounded">Realizar una Publicación</a-->
+	<h2>Lugar de Estudio</h2>
+	<div class="jumbotron">
+		<div class="container">
+		    <h1><small>Agrega un Lugar de Estudio<small></h1>
+			</br></br></br>
+      <div>
+      	<div class="row">
+      			<form role="form" ng-submit="submit()">
+              <!--div ng-controller="GruposEspontaneosCtrl"-->
+                <p><font color="white">2</font><small>Selecciona la ubicación: </small></p>
+                <map zoom="17" center="-33.4490, -70.6831" on-click="placeMarker()">
+                </map>
+              <!--/div-->
+              <br>
+      				<button ng-click=  "addLugar()" type="submit" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Agregar Lugar</button>
+      
+      			</form>
+      		<!--/div-->
+      	</div>  
+      </div>
+    </div>
+  </div>
+</div>

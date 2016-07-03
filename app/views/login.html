@@ -1,0 +1,30 @@
+<div ng-controller="LoginCtrl as up">
+<div class="login-page">
+	<div class="row">
+	    <p class="pull-right">
+	        <a ui-sref="registro" class="pull-right btn btn-white btn-outline btn-lg btn-rounded">Registrarme</a>
+	    </p>
+		<div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4">
+        	<img src="images/logo.png" class="user-avatar" />
+			<h1>Login</h1>
+			<form role="form" ng-submit="submit()">
+
+				<div class="form-content">
+					<div class="form-group">
+						<input type="text" class="form-control input-underline input-lg" id="" placeholder="Email" ng-model="email" required>
+					</div>
+
+					<div class="form-group">
+						<input type="password" class="form-control input-underline input-lg" id="" placeholder="Password" ng-model="pass" required>
+					</div>
+				</div>
+
+				<button ng-click=  "login()" class="btn btn-white btn-outline btn-lg btn-rounded">Login</button>
+
+			</form>
+
+		</div>	
+	</div>
+
+</div>
+</div>

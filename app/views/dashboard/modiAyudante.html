@@ -1,0 +1,35 @@
+<div>
+  
+  <h2>Modificar mis datos de ayudante <small>Observa y modifica tus datos ayudante.</small></h2>
+  <div class="jumbotron">
+    <div class="container">
+
+      <div ng-if = "largo == 0">
+        <div class="row">
+            <span style="font-size:22pt">
+            No eres un usario identificado como ayudante.
+            </span>
+        </div>
+        </br>
+        <h2><small>Para ser ayudante haz clic en el boton "Ser Ayudante"!!</small></h2>
+        <button ng-click = "serAyudante1()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Ser Ayudante</button>
+      </div>
+
+      <div ng-if = "largo > 0">
+        <div class="row">
+            <h3>A continuación se presentan tus datos de ayudante...<h3>
+            </br>
+            </br>
+            <h2><small>Nombre: </small>{{datosAyudante.nombre}}</h2>
+            <h2><small>Apellido: </small>{{datosAyudante.apellidos}}</h2>
+            <h2><small>Valoración: </small>{{datosAyudante.valoracionPromedio}}</h2>
+          </br>
+          <button ng-click = "editarHorarios()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Editar Horarios</button>
+
+          <button ng-click = "eliminarAyudante1()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Dejar de ser Ayudante</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

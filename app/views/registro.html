@@ -1,0 +1,51 @@
+<div ng-controller="RegistroCtrl as up">
+<div class="login-page">
+	<div class="row">
+	    <p class="pull-right">
+	        <a ui-sref="login" class="pull-right btn btn-white btn-outline btn-lg btn-rounded">Login</a>
+	    </p>
+		<div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4">
+        	<img src="images/logo.png" class="user-avatar" />
+			<h1>Registro</h1>
+			<form role="form" ng-submit="submit()">
+
+				<div class="form-content">
+					<div class="form-group">
+						<input type="text" class="form-control input-underline input-lg" id="" placeholder="Nombre *" ng-model="newNombre" required>
+					</div>
+
+					<div class="form-group">
+						<input type="text" class="form-control input-underline input-lg" id="" placeholder="Apellido *" ng-model="newApellido" required>
+					</div>
+
+					<div class="form-group">
+						<input type="email" validate-email class="form-control input-underline input-lg" id="" placeholder="Email *" ng-model="newMail" required>
+					</div>
+
+					<div class="form-group">
+						<input type="email" validate-email class="form-control input-underline input-lg" id="" placeholder="Confirmar Email *" ng-model="confirmacionEmail" required>
+					</div>
+
+					<div class="form-group">
+						<input type="number" class="form-control input-underline input-lg" id="" placeholder="Numero de Telefono" ng-model= "newMovil">
+					</div>
+
+					<div class="form-group">
+						<input type="password" class="form-control input-underline input-lg" id="" placeholder="Password *" ng-model= "newPass" required>
+					</div>
+
+					<div class="form-group">
+						<input type="password" class="form-control input-underline input-lg" id="" placeholder="Confirmar Password *" ng-model= "confirmarPassword" required>
+					</div>
+				</div>
+
+				<p>* : Campos obligatorios</p>
+
+				<button ng-click=  "addPost()" type="submit" class="btn btn-white btn-outline btn-lg btn-rounded">Registrarme</button>
+
+			</form>
+
+		</div>	
+	</div>
+</div>
+</div>

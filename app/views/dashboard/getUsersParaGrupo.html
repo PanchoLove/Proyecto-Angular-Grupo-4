@@ -1,0 +1,17 @@
+<div>
+	<!--a ui-sref="publicar" class="pull-right btn btn-primary btn-outline btn-rounded">Realizar una Publicación</a-->
+	<h2>Buscar Personas con mismos ramos de interes </h2>
+	<div class="jumbotron">
+		<div class="container">
+			<h2>Encuentra personas con ramos de interés iguales, para juntarte a estudiar con ellos</h2>
+			</br>
+			<hr>
+			<div ng-repeat = "a in data">
+			  <strong>Id Usuario:</strong>{{a.usuarioId}} <a ui-sref="verUser.({usuarioId: {{a.usuarioId}}})" class="btn btn-primary btn-outline btn-rounded">Ver Usuario</a><br>
+			  <strong>Ramos:</strong>
+			  		{{a.ramo[0].nombreRamo}} - {{a.ramo[1].nombreRamo}}
+			  <hr>
+			</div>
+		</div>
+	</div>
+</div>

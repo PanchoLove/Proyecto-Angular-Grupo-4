@@ -1,0 +1,38 @@
+<div>
+  
+  <h2>Modificar grupos espontaneos <small>Observa, modifica y elimina grupos espontaneos.</small></h2>
+  <div class="jumbotron">
+    <div class="container">
+
+      <div ng-if = "largo == 0">
+        <div class="row">
+            <span style="font-size:22pt">
+            No tienes ningun grupo espontaneo creado.
+            </span>
+        </div>
+        </br>
+        <h2><small>Desde tu celular puedes crear grupos espontaneos!!</small></h2>
+      </div>
+
+      <div ng-if = "largo > 0">
+        <div class="row">
+            <h3>A continuación se presenta la descripcion y el lugar de tus grupos creados...<h3>
+            </br>
+            </br>
+            <ul ng-repeat="g in grupos">
+              <span style="font-size:15pt">
+            .- Descripción del grupo: {{g.descripcionTemporal}}; Lugar del grupo: {{g.nombreLugar}}
+            </br>
+              </span>
+          </ul>
+          </br>
+          <button ng-click = "fun1()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Editar Grupos</button>
+
+          <button ng-click = "fun4()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Agregar Usuarios al Grupo</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

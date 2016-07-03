@@ -1,0 +1,52 @@
+<div>
+  
+  <h2>Modificar grupos espontaneos <small>Observa, modifica y elimina grupos espontaneos.</small></h2>
+  <div class="jumbotron">
+    <div class="container">
+        <div class="row"> 
+            <div class="form-group">
+                  <p><font color="white">2</font><small> Grupos de Estudio: </small>
+                    <select ng-model="GrupoSeleccionado" ng-options="grupo as grupo.descripcionTemporal for grupo in grupos track by grupo.grupoTemporalId" class="form-control input-lg">
+                      <option value="" selected disabled>Seleccione un grupo...</option>
+                    </select>
+                  </p>
+            </div>
+
+            <button ng-click = "fun2()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Desplegar información grupo</button>
+            </br></br></br>
+
+            <h4>A continuación se presenta la información del grupo seleccionado...</h4>
+            </br></br>
+
+            <div class="form-group">
+                   <p><font color="white">2</font><small> Lugar de Estudio: </small>
+                      <select ng-model="LugarSeleccionado" class="form-control input-lg" ng-disabled="seleccionGrupo">
+                        <option ng-repeat="g in listaLugares" ng-selected="g == LugarSeleccionado"> {{g}}</option>
+                      </select>
+                    </p>
+            </div>
+
+            </br>
+
+            <div class="form-group">
+                  <p><font color="white">2</font><small> Ramo a Estudiar: </small>
+                    <select ng-model="RamoSeleccionado" class="form-control input-lg" ng-disabled="seleccionGrupo">
+                        <option ng-repeat="g in listaRamos" ng-selected="g == RamoSeleccionado"> {{g}}</option>
+                      </select>
+                  </p>
+            </div>
+
+            </br>
+            <div class="form-group">
+              <p><font color="white">2</font><small> Descripción del grupo: </small>
+                <input type="text" class="form-control input-lg" id="" placeholder="Seleccione un grupo en la casilla de grupos..." ng-model="comentarioGrupo"  ng-disabled="seleccionGrupo">
+              </p>
+            </div>
+</br></br>
+             <button ng-click = "eliminarGrupo()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Eliminar Grupo de Estudio</button>
+
+              <button ng-click = "ActualizarGrupo()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Actualizar Grupo de Estudio</button>
+      </div>
+    </div>
+  </div>
+</div>

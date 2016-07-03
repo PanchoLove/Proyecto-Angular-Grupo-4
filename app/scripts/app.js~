@@ -1,0 +1,49 @@
+'use strict';
+
+angular
+  .module('yapp', [
+    'ngMap',
+    'ui.router',
+    'ngAnimate'
+  ])
+  .config(function($stateProvider, $urlRouterProvider) {
+
+    $urlRouterProvider.when('/dashboard', '/dashboard/perfil');
+    $urlRouterProvider.otherwise('/login');
+
+    $stateProvider
+      .state('base', {
+        abstract: true,
+        url: '',
+        templateUrl: 'views/base.html'
+      })
+        .state('login', {
+          url: '/login',
+          parent: 'base',
+          templateUrl: 'views/login.html',
+          controller: 'LoginCtrl'
+        })
+        .state('dashboard', {
+          url: '/dashboard',
+          parent: 'base',
+          templateUrl: 'views/dashboard.html',
+          controller: 'DashboardCtrl'
+        })
+          .state('perfil', {
+            url: '/perfil',
+            parent: 'dashboard',
+            templateUrl: 'views/dashboard/perfil.html'
+          })
+          .state('pubGrupoEspontaneo', {
+            url: '/reports',
+            parent: 'dashboard',
+            templateUrl: 'views/dashboard/pubGrupoEspontaneo.html',
+            controller: 'GruposEspontaneosCtrl'
+          })
+          .state('gruposEspontaneos', {
+            url: '/gruposEspontaneos',
+            parent: 'dashboard',
+            templateUrl: 'views/dashboard/gruposEspontaneos.html' 
+          });
+
+  });
