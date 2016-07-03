@@ -1,0 +1,37 @@
+<div>
+  
+  <h2>Modificar grupos con horario <small>Observa, modifica y elimina grupos con horario.</small></h2>
+  <div class="jumbotron">
+    <div class="container">
+
+      <div ng-if = "largo == 0">
+        <div class="row">
+            <span style="font-size:22pt">
+            No tienes ningún grupo con horario creado.
+            </span>
+        </div>
+        </br>
+        <button ng-click = "crearGruHor()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Crear Grupo con Horario</button>
+      </div>
+
+      <div ng-if = "largo > 0">
+        <div class="row">
+            <h3>A continuación se presenta el lugar, el ramo y la fecha de tus grupos creados...<h3>
+            </br>
+            </br>
+            <ul ng-repeat="g in grupos">
+              <span style="font-size:15pt">
+            .- Lugar del grupo: {{g.nombreLugar}}; Ramo del grupo: {{g.descripcionTemporal}}; Fecha del grupo: {{g.descripcionTemporal}}; 
+            </br>
+              </span>
+          </ul>
+          </br>
+          <button ng-click = "fun70()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Editar Grupos</button>
+
+          <button ng-click = "fun40()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Agregar Usuarios al Grupo</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

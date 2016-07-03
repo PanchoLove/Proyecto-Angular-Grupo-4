@@ -19,7 +19,7 @@ angular.module('yapp')
             	if (parseInt($scope.AllAyudantes[i].usuarioId) == value) {
             		$scope.datosAyudante = $scope.AllAyudantes[i];
             		$scope.largo = 1;
-            		console.log("ayudante",$scope.datosAyudante);
+            		//console.log("ayudante",$scope.datosAyudante);
             	}
             }
             
@@ -65,15 +65,12 @@ angular.module('yapp')
     }
 
     $scope.eliminarAyudante2 = function() {
-
-	    var lista = {"estado":"Pagado"};
-		console.log("lista",lista);
-
-        srvAyudante.serAyudante(value, lista)
+        var idAyudante = $scope.datosAyudante.perfilAyudanteId;
+	    srvAyudante.eliminarAyudante(idAyudante)
         .success(function(data){
-            $scope.retorno = 'Se agrego al ayudante';
+            $scope.retorno = 'Se elimino al ayudante';
 	        $location.path('/dashboard/modiAyudante');
-	        console.log("retorno", $scope.retorno);
+	        //console.log("retorno", $scope.retorno);
             
         })
         .error(function(error){
@@ -81,6 +78,13 @@ angular.module('yapp')
 	        console.log("retorno", $scope.retorno);
 
         });
+    }
+
+    
+
+    $scope.modificarGruposHorarios = function() {
+
+        $location.path('/dashboard/modiGruposHorarios');
     }
 
 

@@ -179,6 +179,24 @@ angular
             templateUrl: 'views/dashboard/confirmAyudante.html',
             controller: 'cntAyudante'
           })
+          .state('eliminarAyudante', {
+            url: '/eliminarAyudante',
+            parent: 'dashboard',
+            templateUrl: 'views/dashboard/eliminarAyudante.html',
+            controller: 'cntAyudante'
+          })
+          .state('modiGruposHorarios', {
+            url: '/modiGruposHorarios',
+            parent: 'dashboard',
+            templateUrl: 'views/dashboard/modiGruposHorarios.html',
+            controller: 'cntModifiGruposHorarios'
+          })
+          .state('crearGrupoHorario', {
+            url: '/crearGrupoHorario',
+            parent: 'dashboard',
+            templateUrl: 'views/dashboard/crearGrupoHorario.html',
+            controller: 'cntModifiGruposHorarios'
+          })
           .state('contacto', {
             url: '/contacto',
             parent: 'dashboard',

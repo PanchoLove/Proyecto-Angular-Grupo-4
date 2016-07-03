@@ -1,0 +1,100 @@
+<div>
+  
+  <h2>Edita grupo con horario <small>Edita un grupo con harario definido.</small></h2>
+  <div class="jumbotron">
+    <div class="container">
+        <div class="row"> 
+        <h2><small>A continuación se presenta el horario diario predefinido:</small></h2>
+        </br>
+        <img src="images/horario.png" HSPACE=225/>
+        <h2><small>A continuación seleccione un grupo para editar:</small></h2>
+        </br>
+            <div class="form-group">
+                  <p><font color="white">2</font><small> Grupos de Estudio: </small>
+
+                    <select ng-model="grupoHorarioSeleccionado" ng-options="grupo as grupo.descripcionHorario for grupo in gruposHorarios track by grupo.grupoHorarioId" class="form-control input-lg">
+                      <option value="" selected disabled>Seleccione un grupo...</option>
+                    </select>
+                  </p>
+            </div>
+            </br>
+        <h2><small>A continuación se presentan los datos a llenar para crear un grupo:</small></h2>
+        </br>
+            <div class="form-group">
+                  <p><font color="white">2</font><small> Ramo a Estudiar: </small>
+
+                    <select ng-model="MateriaSeleccionada" ng-options="materia as materia.nombreRamo for materia in ListaAux track by materia.ramoId" class="form-control input-lg">
+                      <option value="" selected disabled>Seleccione una materia...</option>
+                    </select>
+                  </p>
+            </div>
+            </br>
+
+            <div class="form-group">
+                   <p><font color="white">2</font><small> Lugar de Estudio: </small>
+                      <select ng-model="LugarSeleccionado" ng-options="lugar as lugar.nombreLugar for lugar in allLugares track by lugar.idLugar" class="form-control input-lg">
+                      <option value="" selected disabled>Seleccione un lugar...</option>
+                    </select>
+                    </p>
+            </div>
+
+            </br>
+            </br>
+            <p><font color="white">2</font> Fijar fecha de estudio... </p>
+
+            <div class="form-group">
+                  <p><font color="white">2</font><small> Mes: </small>
+                  </br>
+                    <select ng-model="MesSeleccionado" ng-options="mes as mes for mes in meses" class="form-control input-lg">
+                      <option value="" selected disabled>Seleccione un mes...</option>
+                    </select>
+                  </p>
+            </div>
+
+            <div class="form-group">
+                  <p><font color="white">2</font><small> Fecha del Día: </small>
+                  </br>
+                    <select ng-model="FechaDiaSeleccionada" ng-options="fecha as fecha for fecha in fechas" class="form-control input-lg">
+                      <option value="" selected disabled>Seleccione la fecha del día...</option>
+                    </select>
+                  </p>
+            </div>
+
+            <div class="form-group">
+                  <p><font color="white">2</font><small> Día: </small>
+                  </br>
+                    <select ng-model="DiaSeleccionado" ng-options="dia as dia for dia in dias" class="form-control input-lg">
+                      <option value="" selected disabled>Seleccione el día...</option>
+                    </select>
+                  </p>
+            </div>
+
+            <div class="form-group">
+                  <p><font color="white">2</font><small> Horario: </small>
+                  </br>
+                    <select ng-model="HorarioSeleccionado" ng-options="horario as horario for horario in horarios" class="form-control input-lg">
+                      <option value="" selected disabled>Seleccione una horario...</option>
+                    </select>
+                  </p>
+            </div>
+
+            </br>
+            </br>
+            <div class="form-group">
+              <p><font color="white">2</font><small> Forma de pago del grupo: </small>
+                <input type="text" class="form-control input-lg" id="" placeholder="Especifique la forma de pago de la ayudantia..." ng-model="formaPago">
+              </p>
+            </div>
+            </br>
+            
+            <div class="form-group">
+              <p><font color="white">2</font><small> Descripción del grupo: </small>
+                <input type="text" class="form-control input-lg" id="" placeholder="Realice una descripción del grupo..." ng-model="comentarioGrupo">
+              </p>
+            </div>
+</br></br>
+             <button ng-click = "crearGrupoHor()" class="pull-right btn btn-primary btn-lg btn-outline btn-rounded">Crear Grupo de Estudio con Horario</button>
+      </div>
+    </div>
+  </div>
+</div>
